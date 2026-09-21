@@ -1,19 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!--
+    <!--
     練習・デモ用なので検索エンジンには出さない設定。
     本番公開時は、必要に応じて削除する。
   -->
-  <meta name="robots" content="noindex,nofollow">
+    <meta name="robots" content="noindex,nofollow" />
 
-  <title>サロンドピュア（Salonde pure）｜市原市青葉台の美容室</title>
-  <meta name="description" content="市原市青葉台の小さな美容室 サロンドピュア（Salonde pure）。カット、パーマ、カラー、白髪染めなど、毎日のお手入れがしやすいスタイルをご提案します。">
+    <title>サロンドピュア（Salonde pure）｜市原市青葉台の美容室</title>
+    <meta
+      name="description"
+      content="市原市青葉台の小さな美容室 サロンドピュア（Salonde pure）。カット、パーマ、カラー、白髪染めなど、毎日のお手入れがしやすいスタイルをご提案します。"
+    />
 
-  <!--
+    <!--
     CSSは2段構成。
 
     reset.css
@@ -25,60 +28,60 @@
     reset.css を先、style.css を後に読むことが重要。
     後から読み込んだ style.css で必要な見た目を上書きする。
   -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <!--
+    <!--
     favicon：
     今回は「SP」のモノグラムを使用。
     本番案件ではクライアントの正式ロゴがあれば差し替える。
   -->
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
 
-  <!--
+    <!--
     Headerの英字店名だけ、実店舗メンバーズカードの雰囲気に近い
     Google Fonts「Lobster」を使用する。
 
     本文は読みやすさ優先で、従来の日本語向けシステムフォントを維持。
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
 
-  <!--
+    <!--
     OGPは次段階で追加予定。
     デモ公開時は noindex のままでもよい。
-  -->
-</head>
+  --></head>
 
-<body id="top">
-
-  <!-- ========================================================
+  <body id="top">
+    <!-- ========================================================
        Header
        ======================================================== -->
-  <header class="site-header">
-    <div class="container header-inner">
-
-      <!--
+    <header class="site-header">
+      <div class="container header-inner">
+        <!--
         店名ロゴはTOPへのリンク。
         1ページサイトでは、ロゴを押すとページ先頭へ戻る動作が自然。
       -->
-      <a class="site-logo" href="#top" aria-label="ページの先頭へ戻る">
-        Salonde pure
-      </a>
+        <a class="site-logo" href="#top" aria-label="ページの先頭へ戻る">
+          Salonde pure
+        </a>
 
-      <nav aria-label="メインナビゲーション">
-        <ul class="nav-list">
-          <li><a href="#menu">メニュー・料金</a></li>
-          <li><a href="#about">お店について</a></li>
-          <li><a href="#access">店舗情報</a></li>
-          <li><a href="#contact">お問い合わせ</a></li>
-        </ul>
-      </nav>
+        <nav aria-label="メインナビゲーション">
+          <ul class="nav-list">
+            <li><a href="#menu">メニュー・料金</a></li>
+            <li><a href="#about">お店について</a></li>
+            <li><a href="#access">店舗情報</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+          </ul>
+        </nav>
 
-      <!--
+        <!--
         Headerの強調CTAは「電話で予約する」。
 
         通常navの「お問い合わせ」は #contact へ。
@@ -87,205 +90,220 @@
         同じ場所へ飛ぶリンクを二重に置かず、
         「情報を見る」と「電話する」の役割を分ける。
       -->
-      <a class="header-cta" href="tel:0436610096">
-        電話で予約する
-      </a>
+        <a class="header-cta" href="tel:0436610096"> 電話で予約する </a>
+      </div>
+    </header>
 
-    </div>
-  </header>
-
-
-  <main>
-
-    <!-- ======================================================
+    <main>
+      <!-- ======================================================
          Hero
          ====================================================== -->
-    <section class="hero">
-      <div class="container">
-
-        <!--
+      <section class="hero">
+        <div class="container">
+          <!--
           Hero画像。
 
           PCでは16:9、スマホではCSS側で4:3の額縁へ変更する。
           重要な人物・手元を中央寄りに配置した画像なので、
           左右がトリミングされても主役が残りやすい。
         -->
-        <div class="hero-visual">
-          <img
-            src="img/hero_salon.jpg"
-            alt="美容師が女性客の髪をブラシで整えているサロンドピュアのイメージ"
-          >
+          <div class="hero-visual">
+            <img
+              src="img/hero_salon.jpg"
+              alt="美容師が女性客の髪をブラシで整えているサロンドピュアのイメージ"
+            />
+          </div>
+
+          <div class="hero-text">
+            <h1>
+              いつもの髪を、<br />
+              いつもの安心で。
+            </h1>
+
+            <p>
+              サロンドピュアは、地域のみなさまに気軽に通っていただける、小さな美容室です。<br />
+              カット、パーマ、カラー、白髪染めなど、毎日のお手入れがしやすく、その方らしく過ごせるスタイルを大切にしています。<br />
+              気取らず、ゆっくり過ごせるアットホームな空間で、いつものスタイルも、ちょっとしたイメージチェンジもお気軽にご相談ください。
+            </p>
+
+            <a class="hero-button" href="#menu"> メニュー・料金を見る </a>
+          </div>
         </div>
+      </section>
 
-        <div class="hero-text">
-          <h1>
-            いつもの髪を、<br>
-            いつもの安心で。
-          </h1>
-
-          <p>
-            サロンドピュアは、地域のみなさまに気軽に通っていただける、小さな美容室です。<br>
-            カット、パーマ、カラー、白髪染めなど、毎日のお手入れがしやすく、その方らしく過ごせるスタイルを大切にしています。<br>
-            気取らず、ゆっくり過ごせるアットホームな空間で、いつものスタイルも、ちょっとしたイメージチェンジもお気軽にご相談ください。
-          </p>
-
-          <a class="hero-button" href="#menu">
-            メニュー・料金を見る
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ======================================================
+      <!-- ======================================================
          About
          ====================================================== -->
-    <section id="about" class="section">
-      <div class="container">
+      <section id="about" class="section">
+        <div class="container">
+          <h2 class="section-title">お店について</h2>
 
-        <h2 class="section-title">お店について</h2>
-
-        <div class="about-row">
-
-          <!--
+          <div class="about-row">
+            <!--
             About 1：店内の雰囲気を見せる4:3画像。
             「空間」の説明役なので、人物は置かず店内そのものを見せる。
           -->
-          <div class="about-visual">
-            <img
-              src="img/about_salon_interior.jpg"
-              alt="ピンク色の美容椅子と鏡がある小さな美容室の店内イメージ"
-              loading="lazy"
-            >
+            <div class="about-visual">
+              <img
+                src="img/about_salon_interior.jpg"
+                alt="ピンク色の美容椅子と鏡がある小さな美容室の店内イメージ"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="about-text">
+              <h3>気兼ねなく通える、いつもの美容室</h3>
+              <p>
+                サロンドピュアでは、初めての方にもくつろいでいただけるよう、親しみやすい雰囲気づくりを心がけています。
+              </p>
+              <p>
+                大きなお店のような華やかさはありませんが、落ち着いた空間で、お客様との会話や、日々のお手入れのしやすさを大切にしています。
+              </p>
+              <p>
+                昔から通ってくださるお客様も多く、白髪染めやパーマ、年齢を重ねた髪のお悩みなども、気兼ねなくご相談いただけます。
+              </p>
+            </div>
           </div>
 
-          <div class="about-text">
-            <h3>気兼ねなく通える、いつもの美容室</h3>
-            <p>
-              サロンドピュアでは、初めての方にもくつろいでいただけるよう、親しみやすい雰囲気づくりを心がけています。
-            </p>
-            <p>
-              大きなお店のような華やかさはありませんが、落ち着いた空間で、お客様との会話や、日々のお手入れのしやすさを大切にしています。
-            </p>
-            <p>
-              昔から通ってくださるお客様も多く、白髪染めやパーマ、年齢を重ねた髪のお悩みなども、気兼ねなくご相談いただけます。
-            </p>
-          </div>
-
-        </div>
-
-
-        <div class="about-row reverse">
-
-          <!--
+          <div class="about-row reverse">
+            <!--
             About 2：仕事道具のディテールを見せる4:3画像。
             About 1が「空間」、こちらは「仕事」の説明役。
           -->
-          <div class="about-visual">
-            <img
-              src="img/about_salon_tools.jpg"
-              alt="ハサミ、コーム、ブラシなど美容室の仕事道具のイメージ"
-              loading="lazy"
-            >
-          </div>
+            <div class="about-visual">
+              <img
+                src="img/about_salon_tools.jpg"
+                alt="ハサミ、コーム、ブラシなど美容室の仕事道具のイメージ"
+                loading="lazy"
+              />
+            </div>
 
-          <div class="about-text">
-            <h3>あなたらしい、自然なスタイル</h3>
-            <p>
-              髪質や毛量、普段のお手入れ方法は人それぞれ。
-            </p>
-            <p class="about-quote">
-              「いつもの髪型をきれいに整えたい」<br>
-              「自宅でも扱いやすいスタイルにしたい」<br>
-              「白髪を自然に整えたい」
-            </p>
-            <p>
-              そんな日常のご希望にも、一人ひとりに合わせて丁寧にお応えします。
-            </p>
-            <p>
-              長く通える“いつもの美容室”として、ほっとできる時間を過ごしていただけたらと思っています。
-            </p>
+            <div class="about-text">
+              <h3>あなたらしい、自然なスタイル</h3>
+              <p>髪質や毛量、普段のお手入れ方法は人それぞれ。</p>
+              <p class="about-quote">
+                「いつもの髪型をきれいに整えたい」<br />
+                「自宅でも扱いやすいスタイルにしたい」<br />
+                「白髪を自然に整えたい」
+              </p>
+              <p>
+                そんな日常のご希望にも、一人ひとりに合わせて丁寧にお応えします。
+              </p>
+              <p>
+                長く通える“いつもの美容室”として、ほっとできる時間を過ごしていただけたらと思っています。
+              </p>
+            </div>
           </div>
-
         </div>
+      </section>
 
-      </div>
-    </section>
-
-
-    <!-- ======================================================
+      <!-- ======================================================
          Menu
          ====================================================== -->
-    <section id="menu" class="section">
-      <div class="container">
+      <section id="menu" class="section">
+        <div class="container">
+          <h2 class="section-title">メニュー・料金</h2>
 
-        <h2 class="section-title">メニュー・料金</h2>
+          <p class="section-lead">
+            髪質や毛量、髪の長さ、ご希望の仕上がりに合わせて施術いたします。<br />
+            ご不明な点は、お電話またはご来店時にお気軽にお問い合わせください。
+          </p>
 
-        <p class="section-lead">
-          髪質や毛量、髪の長さ、ご希望の仕上がりに合わせて施術いたします。<br>
-          料金について詳しくは、お電話またはご来店時にお気軽にお問い合わせください。
-        </p>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <span class="menu-name">
+                <span class="menu-name-main">カット</span>
+                <span class="menu-detail">【シャンプー・ブロー込】</span>
+              </span>
+              <span class="menu-price">￥3,600～</span>
+            </div>
 
-        <div class="menu-grid">
-          <div class="menu-item"><span class="menu-name">カット</span><span class="menu-price">￥3,500～</span></div>
-          <div class="menu-item"><span class="menu-name">シャンプー・カット</span><span class="menu-price">￥4,000～</span></div>
-          <div class="menu-item"><span class="menu-name">パーマ</span><span class="menu-price">￥7,000～</span></div>
-          <div class="menu-item"><span class="menu-name">カラー</span><span class="menu-price">￥6,000～</span></div>
-          <div class="menu-item"><span class="menu-name">白髪染め</span><span class="menu-price">￥6,000～</span></div>
-          <div class="menu-item"><span class="menu-name">パーマ＋カット</span><span class="menu-price">￥9,000～</span></div>
-          <div class="menu-item"><span class="menu-name">白髪染め＋カット</span><span class="menu-price">￥8,500～</span></div>
-          <div class="menu-item"><span class="menu-name">白髪染め＋パーマ＋カット</span><span class="menu-price">￥15,000～</span></div>
-          <div class="menu-item"><span class="menu-name">シャンプー・ブロー</span><span class="menu-price">￥2,500～</span></div>
-        </div>
+            <div class="menu-item">
+              <span class="menu-name">
+                <span class="menu-name-main">パーマ</span>
+                <span class="menu-detail"
+                  >【シャンプー・カット・ブロー込】</span
+                >
+              </span>
+              <span class="menu-price">￥8,000～</span>
+            </div>
 
-        <p class="menu-note">
-          ※上記料金はデモサイト作成用の仮料金です。<br>
-          髪の長さや施術内容などにより料金が異なる場合があります。
-        </p>
+            <div class="menu-item">
+              <span class="menu-name"
+                >カラー
+                <span class="menu-discount-label">※次回割引あり</span></span
+              >
+              <span class="menu-price">￥6,000～</span>
+            </div>
 
-      </div>
-    </section>
+            <div class="menu-item">
+              <span class="menu-name">マニキュア</span>
+              <span class="menu-price">￥6,000～</span>
+            </div>
 
+            <div class="menu-item">
+              <span class="menu-name">ヘナ</span>
+              <span class="menu-price">￥6,500～</span>
+            </div>
 
-    <!-- ======================================================
-         Store information / Access
-         ====================================================== -->
-    <section id="access" class="section">
-      <div class="container">
+            <div class="menu-item">
+              <span class="menu-name">シャンプー・ブロー</span>
+              <span class="menu-price">￥2,500～</span>
+            </div>
 
-        <h2 class="section-title">店舗情報・アクセス</h2>
-
-        <div class="info-layout">
-
-          <div class="info-text">
-
-            <h3 class="shop-name">サロンドピュア <span class="shop-name-en">Salonde pure</span></h3>
-
-            <dl class="info-list">
-              <dt>住所</dt>
-              <dd>千葉県市原市青葉台4丁目5-9</dd>
-
-              <dt>電話番号</dt>
-              <dd><a href="tel:0436610096">0436-61-0096</a></dd>
-
-              <dt>営業時間</dt>
-              <dd>9:00～17:00</dd>
-
-              <dt>定休日</dt>
-              <dd>日曜日・祝日</dd>
-            </dl>
-
-            <p class="access-note">
-              ご予約や施術内容についてのお問い合わせは、お電話にてお気軽にご連絡ください。
-            </p>
-
+            <div class="menu-item">
+              <span class="menu-name">シャンプー（白内障後）</span>
+              <span class="menu-price">￥2,000～</span>
+            </div>
           </div>
 
-          <div class="access-visuals">
+          <p class="menu-note">
+            表示価格はすべて税別です。<br />
+            髪の長さや施術内容などにより料金が異なる場合があります。
+          </p>
 
-            <div class="map-box">
-              <!--
+          <p class="menu-note menu-note-discount">
+            ※カラーは、前回のカラー施術から1か月未満のご来店で20％OFFとなります。<br />
+            きれいな髪色を保っていただくための割引です。
+          </p>
+        </div>
+      </section>
+
+      <!-- ======================================================
+         Store information / Access
+         ====================================================== -->
+      <section id="access" class="section">
+        <div class="container">
+          <h2 class="section-title">店舗情報・アクセス</h2>
+
+          <div class="info-layout">
+            <div class="info-text">
+              <h3 class="shop-name">
+                サロンドピュア <span class="shop-name-en">Salonde pure</span>
+              </h3>
+
+              <dl class="info-list">
+                <dt>住所</dt>
+                <dd>千葉県市原市青葉台4丁目5-9</dd>
+
+                <dt>電話番号</dt>
+                <dd><a href="tel:0436610096">0436-61-0096</a></dd>
+
+                <dt>営業時間</dt>
+                <dd>9:00～17:00</dd>
+
+                <dt>定休日</dt>
+                <dd>土曜日・日曜日・祝日</dd>
+              </dl>
+
+              <p class="access-note">
+                ご予約や施術内容についてのお問い合わせは、お電話にてお気軽にご連絡ください。
+              </p>
+            </div>
+
+            <div class="access-visuals">
+              <div class="map-box">
+                <!--
                 Google Maps = 地図の中身
                 CSS = 地図を入れる額縁
 
@@ -293,15 +311,15 @@
                 最終版ではGoogle Mapsの「共有 → 地図を埋め込む」から
                 取得した正式iframeへ差し替えてもよい。
               -->
-              <iframe
-                src="https://www.google.com/maps?q=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E9%9D%92%E8%91%89%E5%8F%B04%E4%B8%81%E7%9B%AE5-9&z=16&output=embed"
-                title="サロンドピュア周辺地図"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
+                <iframe
+                  src="https://www.google.com/maps?q=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E9%9D%92%E8%91%89%E5%8F%B04%E4%B8%81%E7%9B%AE5-9&z=16&output=embed"
+                  title="サロンドピュア周辺地図"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
 
-            <!--
+              <!--
               店舗外観。
               Heroではなく、アクセス情報の「現実確認」として置く。
 
@@ -310,103 +328,66 @@
               「ピンクのひさしと看板が目印です。」が
               必ずこの写真の説明として付いてくる。
             -->
-            <figure class="store-photo-figure">
-              <div class="store-photo">
-                <img
-                  src="img/store_exterior.jpg"
-                  alt="ピンクのひさしと看板があるサロンドピュアの店舗外観イメージ"
-                  loading="lazy"
-                >
-              </div>
-              <figcaption class="store-photo-caption">
-                ピンクのひさしと看板が目印です。
-              </figcaption>
-            </figure>
-
+              <figure class="store-photo-figure">
+                <div class="store-photo">
+                  <img
+                    src="img/store_exterior.jpg"
+                    alt="ピンクのひさしと看板があるサロンドピュアの店舗外観イメージ"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption class="store-photo-caption">
+                  ピンクのひさしと看板が目印です。
+                </figcaption>
+              </figure>
+            </div>
           </div>
-
         </div>
+      </section>
 
-      </div>
-    </section>
-
-
-    <!-- ======================================================
+      <!-- ======================================================
          Contact
          ====================================================== -->
-    <section id="contact" class="section">
-      <div class="container">
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="contact-box">
+            <h2 class="section-title">ご予約・お問い合わせ</h2>
 
-        <div class="contact-box">
+            <p class="contact-lead">
+              カット、パーマ、カラー、白髪染めなどのご予約や、料金・施術内容についてのお問い合わせは、お電話にて承っております。
+            </p>
 
-          <h2 class="section-title">ご予約・お問い合わせ</h2>
+            <p class="contact-example">
+              「白髪や髪のお手入れを相談したい」<br />
+              「白髪染め・パーマ・カットを一緒にお願いすると、おいくらくらいですか？」
+            </p>
 
-          <p class="contact-lead">
-            カット、パーマ、カラー、白髪染めなどのご予約や、料金・施術内容についてのお問い合わせは、お電話またはメールにて承っております。
-          </p>
+            <div class="contact-actions">
+              <a class="contact-button tel" href="tel:0436610096">
+                <span class="contact-button-label"
+                  >電話でご予約・お問い合わせ</span
+                >
+                <span class="contact-phone">0436-61-0096</span>
+              </a>
+            </div>
 
-          <p class="contact-example">
-            「いつもの髪型を整えたい」<br>
-            「白髪や髪のお手入れについて相談したい」
-          </p>
-
-          <p class="contact-lead">
-            ご予約はお電話がスムーズです。その他のご相談は、メールでもお気軽にお問い合わせください。
-          </p>
-
-          <div class="contact-actions">
-            <a class="contact-button tel" href="tel:0436610096">
-              <span class="contact-button-label">電話で予約する</span>
-              <span class="contact-phone">0436-61-0096</span>
-            </a>
-
-            <!--
-              デモ用の仮メールアドレス。
-              .example は実在サイト用には使わない予約済みドメイン。
-              本番時に店舗の実メールアドレスへ差し替える。
-            -->
-            <a
-              class="contact-button mail"
-              href="mailto:info@salonde-pure.example?subject=%E3%82%B5%E3%82%A4%E3%83%88%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B"
-            >
-              <span class="contact-button-label">メールで問い合わせる</span>
-              <span class="contact-email">info@salonde-pure.example</span>
-            </a>
+            <p class="contact-note">お電話は営業時間内にお願いいたします。</p>
           </div>
-
-          <p class="contact-note">
-            営業時間 9:00～17:00<br>
-            日曜日・祝日休み
-          </p>
-
         </div>
+      </section>
+    </main>
 
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ========================================================
+    <!-- ========================================================
        Footer
        ======================================================== -->
-  <footer class="site-footer">
+    <footer class="site-footer">
+      <p class="footer-name">Salonde pure</p>
 
-    <p class="footer-name">
-      Salonde pure
-    </p>
+      <p class="footer-nav">
+        <a href="privacy.html"> プライバシーポリシー </a>
+      </p>
 
-    <p class="footer-nav">
-      <a href="privacy.html">
-        プライバシーポリシー
-      </a>
-    </p>
-
-    <p class="copyright">
-      &copy; Salonde pure
-    </p>
-
-  </footer>
-
-</body>
+      <p class="copyright">&copy; Salonde pure</p>
+    </footer>
+  </body>
 </html>
