@@ -466,15 +466,37 @@ a {
   padding-top: 36px;
 }
 
-.hero-text h1 {
+/*
+      Hero内のh1は、見た目の主役ではなく「このページが何のサイトか」を
+      文書構造として明示する役割。
+      小さめ・控えめに見せ、キャッチコピーとは役割を分ける。
+    */
+.hero-title {
+  margin: 0 0 10px;
+
+  color: var(--color-blue);
+  font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+}
+
+/*
+      見た目上のHero主役はキャッチコピー。
+      h1ではなくpだが、CSSで大きく見せる。
+      HTMLの見出し階層と、視覚上の強弱は別に考える。
+    */
+.hero-catch {
   margin: 0 0 18px;
 
+  color: var(--color-text);
   font-size: clamp(2.15rem, 5vw, 4rem);
+  font-weight: 700;
   line-height: 1.18;
   letter-spacing: 0.01em;
 }
 
-.hero-text p {
+.hero-description {
   margin: 0 0 28px;
 
   color: var(--color-text-sub);
@@ -962,7 +984,7 @@ a {
       店舗情報では、日本語名を主役にして英字表記を補助的に併記する。
 
       Headerのロゴは「Salonde pure」のまま。
-      本文は年配のお客様にも読みやすい「サロンドピュア」を優先する。
+      本文は年配のお客様にも読みやすい「サロンド・ピュア」を優先する。
     */
 .shop-name-en {
   display: inline-block;
@@ -1287,7 +1309,12 @@ a {
     padding-top: 28px;
   }
 
-  .hero-text h1 {
+  .hero-title {
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+  }
+
+  .hero-catch {
     font-size: clamp(1.7rem, 7vw, 2.3rem);
   }
 
