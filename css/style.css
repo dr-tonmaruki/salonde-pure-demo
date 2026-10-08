@@ -539,7 +539,7 @@ a {
     */
 
 #menu {
-  background: var(--color-bg);
+  background: var(--color-bg-sub);
 }
 
 /*
@@ -621,7 +621,7 @@ a {
     */
 
 #about {
-  background: var(--color-bg-sub);
+  background: var(--color-bg);
 }
 
 .about-row {
@@ -1233,7 +1233,7 @@ a {
 
         [       LOGO       ]
 
-        [メニュー] [お店について]
+        [お店について] [メニュー]
         [店舗情報] [お問い合わせ]
 
         [        電話で予約する        ]
